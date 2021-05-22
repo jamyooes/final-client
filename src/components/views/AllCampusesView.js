@@ -13,12 +13,23 @@ const AllCampusesView = (props) => {
           <Link to={`/campus/${campus.id}`}>
             <h1>{campus.name}</h1>
           </Link>
-          <p>{campus.description}</p>
+          <p>{numStudents(campus)} students</p>
         </div>
       ))}
     </div>
   );
 };
+
+function numStudents(campus) {
+  let student_total = 0;
+  let numStudents = campus.students.length;
+  if (numStudents > 0) {
+    for (let i = 0; i < numStudents; i++) {
+      student_total++;
+    }
+  }
+  return student_total;
+}
 
 AllCampusesView.propTypes = {
   allCampuses: PropTypes.array.isRequired,
