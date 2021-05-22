@@ -29,8 +29,8 @@ const App = () => {
         
         /*Try to find out what parameters go into the exact path here to link them properly to their forms*/
         /*********************************************************/
-        <Route exact path="/campuses" component={AddCampusFormContainer} />
-        <Route exact path="/student" component={AddStudentFormContainer} />
+        <Route exact path="/campus/createdAt:" component={AddCampusFormContainer} />
+        <Route exact path="/student/createdAt:" component={AddStudentFormContainer} />
         /*********************************************************** */
       </Switch>
     </div>
