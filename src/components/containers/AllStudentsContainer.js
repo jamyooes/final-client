@@ -1,8 +1,12 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { fetchAllStudentsThunk, deleteStudentThunk, fetchAllCampusesThunk } from "../../store/thunks";
-import  AllStudentsView  from "../views/AllStudentsView";
+import {
+  fetchAllStudentsThunk,
+  deleteStudentThunk,
+  fetchAllCampusesThunk,
+} from "../../store/thunks";
+import AllStudentsView from "../views/AllStudentsView";
 
 class AllStudentsContainer extends Component {
   componentDidMount() {
@@ -11,10 +15,10 @@ class AllStudentsContainer extends Component {
     this.props.fetchAllCampuses();
   }
 
-  deleteStudent = (id) =>{
+  deleteStudent = (id) => {
     this.props.deleteStudent(id);
-    window.location='/students'
-  }
+    window.location = "/students";
+  };
 
   render() {
     // pass all the info back to AllStudentsView to handle the displaying
