@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { connect } from "react-redux";
-import { StudentView } from "../views";
-import { deleteStudentThunk, editStudentThunk, fetchStudentThunk,} from "../../thunks";
+import { deleteStudentThunk, editStudentThunk, fetchStudentThunk,} from "../../store/thunks";
+import  StudentsView from "../views/StudentsView";
 
 class StudentContainer extends Component {
   constructor(){
@@ -79,7 +79,7 @@ class StudentContainer extends Component {
     for (const campus of this.props.allCampuses) {
       campuses[campus.id] = campus;
     }
-    return <StudentView 
+    return <StudentsView 
       firstName={this.state.firstName}
       lastname={this.state.lastName}
       email={this.state.email}
@@ -96,10 +96,6 @@ class StudentContainer extends Component {
     />;
   }
 }
-
-const StudentContainer = () => {
-  return <h1>Single Student View</h1>;
-};
 
 // map state to props
 const mapStatus = (status) => {
