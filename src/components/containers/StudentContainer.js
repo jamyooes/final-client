@@ -98,25 +98,23 @@ class StudentContainer extends Component {
 }
 
 const StudentContainer = () => {
-  return (
-    <h1>Single Student View</h1>
-  );
+  return <h1>Single Student View</h1>;
 };
 
 // map state to props
-const mapState = (state) => {
+const mapStatus = (status) => {
   return {
-    student: state.student,
-    allCampuses: state.allCampuses,
+    student: status.student,
+    allCampuses: status.allCampuses,
   };
 };
 
-const mapDispatch = (dispatch) => {
+const mapDisplay = (display) => {
   return {
-    fetchStudent: (id) => dispatch(fetchStudentThunk(id)),
-    deleteAStudent: (id) => dispatch(deleteStudentThunk(id)),
-    editStudent: (student) => dispatch(editStudentThunk(student)),
+    fetchStudent: (id) => display(fetchStudentThunk(id)),
+    deleteAStudent: (id) => display(deleteStudentThunk(id)),
+    editStudent: (student) => display(editStudentThunk(student)),
   };
 };
 
-export default connect(mapState, mapDispatch)(StudentContainer);
+export default connect(mapStatus, mapDisplay)(StudentContainer);
