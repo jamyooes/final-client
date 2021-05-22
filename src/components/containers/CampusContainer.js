@@ -11,11 +11,7 @@ class CampusContainer extends Component {
   }
 
   render() {
-    return (
-      <CampusView 
-        campus={this.props.campus}
-      />
-    );
+    return <CampusView campus={this.props.campus} />;
   }
 }
 
