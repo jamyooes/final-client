@@ -14,6 +14,9 @@ const AllCampusesView = (props) => {
             <h1>{campus.name}</h1>
           </Link>
           <p>{numStudents(campus)} students</p>
+          <div>
+            <button type="button">Delete</button>
+          </div>
         </div>
       ))}
     </div>
