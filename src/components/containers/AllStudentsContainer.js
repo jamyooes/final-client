@@ -28,7 +28,7 @@ class AllStudentsContainer extends Component {
   }
 }
 
-// Map state to props;
+// Map state to to the props
 const mapState = (state) => {
   return {
     title: "list of all students",
@@ -37,7 +37,7 @@ const mapState = (state) => {
   };
 };
 
-// Map dispatch to props;
+// Map dispatch to  the props
 const mapDispatch = (dispatch) => {
   return {
     fetchAllStudents: () => dispatch(fetchAllStudentsThunk()),
@@ -46,12 +46,12 @@ const mapDispatch = (dispatch) => {
   };
 };
 
-// Type check props;
+// prop tpyes
 AllStudentsContainer.propTypes = {
   allStudents: PropTypes.array.isRequired,
   fetchAllStudents: PropTypes.func.isRequired,
   fetchAllCampuses: PropTypes.func.isRequired,
 };
 
-// Export our store-connected container by default;
+// export container
 export default connect(mapState, mapDispatch)(AllStudentsContainer);
