@@ -1,7 +1,7 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { fetchAllStudentsThunk } from "../../store/thunks";
+import { fetchAllStudentsThunk, deleteStudentThunk, fetchAllCampusesThunk } from "../../store/thunks";
 import  AllStudentsView  from "../views/AllStudentsView";
 
 class AllStudentsContainer extends Component {
@@ -21,6 +21,8 @@ class AllStudentsContainer extends Component {
     return (
       <AllStudentsView
         allStudents={this.props.allStudents}
+        title={this.props.title}
+        deleteStudent={this.props.deleteStudent}
       />
     );
   }
@@ -29,7 +31,9 @@ class AllStudentsContainer extends Component {
 // Map state to props;
 const mapState = (state) => {
   return {
+    title: "list of all students",
     allStudents: state.allStudents,
+    allCampuses: state.allCampuses,
   };
 };
 
@@ -37,6 +41,8 @@ const mapState = (state) => {
 const mapDispatch = (dispatch) => {
   return {
     fetchAllStudents: () => dispatch(fetchAllStudentsThunk()),
+    deleteStudent: (id) => dispatch(deleteStudentThunk(id)),
+    fetchAllCampuses: () => dispatch(fetchAllCampusesThunk()),
   };
 };
 
@@ -44,6 +50,7 @@ const mapDispatch = (dispatch) => {
 AllStudentsContainer.propTypes = {
   allStudents: PropTypes.array.isRequired,
   fetchAllStudents: PropTypes.func.isRequired,
+  fetchAllCampuses: PropTypes.func.isRequired,
 };
 
 // Export our store-connected container by default;
