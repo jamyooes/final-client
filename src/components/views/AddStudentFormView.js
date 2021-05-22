@@ -14,6 +14,7 @@ const AddStudentFormView = (props) => {
                         value={props.firstName}
                         name="firstName"
                         onChange={props.handleChange}
+                        placeholder="First Name"
                         />
                 </div>
 
@@ -22,7 +23,8 @@ const AddStudentFormView = (props) => {
                     <input 
                         value={props.lastName}
                         name="lastName"
-                        onChange={props.handleChange}    
+                        onChange={props.handleChange}
+                        placeholder="Last Name"    
                     />
                 </div>
                 
@@ -32,6 +34,7 @@ const AddStudentFormView = (props) => {
                         value={props.email}
                         name="email"
                         onChange={props.handleChange}
+                        placeholder="Email"
                     />
                 </div>
 
@@ -41,6 +44,7 @@ const AddStudentFormView = (props) => {
                         value={props.campusId}
                         name="campusId"
                         onChange={props.handleChange}
+                        placeholder="Campus ID"
                     >
                         {props.allCampuses.map(campus => <option value= {campus.id} key={campus.name}> {campus.name} </option>)}
                         <option value= ''> No Campus</option>
@@ -53,6 +57,7 @@ const AddStudentFormView = (props) => {
                         value={props.gpa}
                         name="gpa"
                         onChange={props.handleChange}
+                        placeholder="GPA"
                     />
                 </div>
 
@@ -62,6 +67,7 @@ const AddStudentFormView = (props) => {
                         value={props.imageUrl}
                         name="imageUrl"
                         onChange={props.handleChange}
+                        placeholder="Image"
                     />
                 </div>
                 <button>Add Student</button>
