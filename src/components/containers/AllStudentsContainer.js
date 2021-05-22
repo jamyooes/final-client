@@ -13,7 +13,7 @@ class AllStudentsContainer extends Component {
 
   deleteStudent = (id) =>{
     this.props.deleteStudent(id);
-    window.location='/stdents'
+    window.location='/students'
   }
 
   render() {
