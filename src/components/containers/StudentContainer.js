@@ -64,6 +64,7 @@ class StudentContainer extends Component {
     this.props.EditStudent(student);
   };
 
+/*
   componentDidMount() {
     this.props.fetchStudent(this.props.match.params.id);
     this.props.fetchAllCampuses();
@@ -72,7 +73,7 @@ class StudentContainer extends Component {
   deleteAStudent = (id) =>{
     this.props.deleteStudent(id);
     window.location = '/students'; 
-  }
+  */
 
   render() {
     const campuses = {};
