@@ -13,50 +13,45 @@ class AllStudentsContainer extends Component {
 
   deleteStudent = (id) =>{
     this.props.deleteStudent(id);
-    window.location='/stdents'
+    window.location='/students'
   }
 
   render() {
-    const campuses = {};
-    for(const name of this.props.allCampuses){
-      campuses[name.id] = name;
-    }
     // pass all the info back to AllStudentsView to handle the displaying
     return (
       <AllStudentsView
         allStudents={this.props.allStudents}
         title={this.props.title}
         deleteStudent={this.props.deleteStudent}
-        allCampuses={campuses}
       />
     );
   }
 }
 
-// Map state to the props
+// Map state to props;
 const mapState = (state) => {
   return {
-    title: "List of all students",
+    title: "list of all students",
+    allStudents: state.allStudents,
     allCampuses: state.allCampuses,
-    allStudents: state.allStudents
   };
 };
 
-// Map dispatch to the props
+// Map dispatch to props;
 const mapDispatch = (dispatch) => {
   return {
     fetchAllStudents: () => dispatch(fetchAllStudentsThunk()),
+    deleteStudent: (id) => dispatch(deleteStudentThunk(id)),
     fetchAllCampuses: () => dispatch(fetchAllCampusesThunk()),
-    deleteStudent: (id) => dispatch(deleteStudentThunk()),
   };
 };
 
-// prop type
+// Type check props;
 AllStudentsContainer.propTypes = {
   allStudents: PropTypes.array.isRequired,
-  fetchAllCampuses: PropTypes.func.isRequired,
   fetchAllStudents: PropTypes.func.isRequired,
+  fetchAllCampuses: PropTypes.func.isRequired,
 };
 
-// Exports the container
+// Export our store-connected container by default;
 export default connect(mapState, mapDispatch)(AllStudentsContainer);
