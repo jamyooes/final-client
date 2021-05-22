@@ -54,11 +54,27 @@ const HomePageView = () => {
             </Button>
           </Link>
 
+          <Link className = {classes.links} to={"/campuses"}>
+            <Button variant="contained" color="primary" style={{ marginRight: "10px" }}>
+              Add Campus
+            </Button>
+          </Link>
+
+
           <Link className={classes.links} to={"/students"}>
-            <Button variant="contained" color="primary">
+            <Button variant="contained" color="primary" style={{ marginRight: "10px" }}>
               All Students
             </Button>
           </Link>
+
+
+          <Link className = {classes.links} to={"/students"}>
+            <Button variant="contained" color="primary" style={{ marginRight: "10px" }}>
+              Add Students
+            </Button>
+          </Link>
+
+
         </Toolbar>
       </AppBar>
 
