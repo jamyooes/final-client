@@ -9,6 +9,8 @@ import {
   StudentContainer,
   AllCampusesContainer,
   AllStudentsContainer,
+  AddCampusFormContainer,
+  AddStudentFormContainer,
 } from "./components/containers";
 
 // if you create separate components for adding/editing
@@ -24,6 +26,12 @@ const App = () => {
         <Route exact path="/campus/:id" component={CampusContainer} />
         <Route exact path="/students" component={AllStudentsContainer} />
         <Route exact path="/student/:id" component={StudentContainer} />
+        
+        /*Try to find out what parameters go into the exact path here to link them properly to their forms*/
+        /*********************************************************/
+        <Route exact path="/campuses" component={AddCampusFormContainer} />
+        <Route exact path="/student" component={AddStudentFormContainer} />
+        /*********************************************************** */
       </Switch>
     </div>
   );
