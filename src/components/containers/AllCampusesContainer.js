@@ -10,11 +10,6 @@ class AllCampusesContainer extends Component {
     this.props.fetchAllCampuses();
   }
 
-  deleteCampus = (id) => {
-    this.props.deleteCampus(id);
-    window.location = "/campus";
-  };
-
   render() {
     return (
       <AllCampusesView
