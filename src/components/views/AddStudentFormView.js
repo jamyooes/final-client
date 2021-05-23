@@ -11,8 +11,8 @@ const AddStudentFormView = (props) => {
         {/**first name */}
         <div>
           <input
-            value={props.firstName}
-            name="firstName"
+            value={props.firstname}
+            name="firstname"
             onChange={props.handleChange}
             placeholder="First Name"
           />
@@ -21,8 +21,8 @@ const AddStudentFormView = (props) => {
         {/** last name */}
         <div>
           <input
-            value={props.lastName}
-            name="lastName"
+            value={props.lastname}
+            name="lastname"
             onChange={props.handleChange}
             placeholder="Last Name"
           />
@@ -84,8 +84,8 @@ const AddStudentFormView = (props) => {
 AddStudentFormView.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired,
-  firstName: PropTypes.string.isRequired,
-  lastName: PropTypes.string.isRequired,
+  firstname: PropTypes.string.isRequired,
+  lastname: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
 };
 

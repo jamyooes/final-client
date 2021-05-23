@@ -8,11 +8,11 @@ class AddStudentFormContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: "",
-      lastName: "",
+      firstname: "",
+      lastname: "",
       email: "",
       gpa: 0,
-      image_URL: "",
+      imageUrl: "",
       campusId: "",
     };
   }
@@ -29,10 +29,10 @@ class AddStudentFormContainer extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    if (this.state.firstName === "" || !this.state.firstName) {
+    if (this.state.firstname === "" || !this.state.firstname) {
       return alert("please enter student first name");
     }
-    if (this.state.lastName === "" || !this.state.lastName) {
+    if (this.state.lastname === "" || !this.state.lastname) {
       return alert("please make sure you enter your last name");
     }
     if (this.state.email === "" || !this.state.email) {
@@ -48,11 +48,11 @@ class AddStudentFormContainer extends Component {
   render() {
     return (
       <AddStudentFormView
-        firstName={this.state.firstName}
-        lastName={this.state.lastName}
+        firstname={this.state.firstname}
+        lastname={this.state.lastname}
         email={this.state.email}
         campusId={this.state.campusId}
-        image_URL={this.state.image_URL}
+        imageUrl={this.state.imageUrl}
         allCampuses={this.props.allCampuses}
         handleSubmit={this.handleSubmit}
         handleChange={this.handleChange}
