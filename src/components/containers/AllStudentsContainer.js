@@ -57,10 +57,5 @@ AllStudentsContainer.propTypes = {
   fetchAllCampuses: PropTypes.func.isRequired,
 };
 
-<<<<<<< HEAD
-// Export our store-connected container by default;
-export default connect(mapState, mapDispatch)(AllStudentsContainer);
-=======
 // export container
 export default connect(mapState, mapDispatch)(AllStudentsContainer);
->>>>>>> 5447cb09bb945683793175a2578f021ef497987d

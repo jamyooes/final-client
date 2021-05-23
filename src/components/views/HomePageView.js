@@ -54,7 +54,7 @@ const HomePageView = () => {
             </Button>
           </Link>
 
-          <Link className = {classes.links} to={"/campuses"}>
+          <Link className = {classes.links} to={"/campuses/create"}>
             <Button variant="contained" color="primary" style={{ marginRight: "10px" }}>
               Add Campus
             </Button>
@@ -68,7 +68,7 @@ const HomePageView = () => {
           </Link>
 
 
-          <Link className = {classes.links} to={"/students"}>
+          <Link className = {classes.links} to={"/students/create"}>
             <Button variant="contained" color="primary" style={{ marginRight: "10px" }}>
               Add Students
             </Button>
