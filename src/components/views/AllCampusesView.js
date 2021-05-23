@@ -14,9 +14,11 @@ const AllCampusesView = (props) => {
             <button onClick={() => props.deleteCampus(campus.id)}>
               Delete
             </button>
-            <button onClick={() => props.editCampus(campus.id)}>
-              Edit
-            </button>
+            <Link to={'/ooofs'}>
+              <button onClick={() => props.editCampus(campus.id)}>
+                Edit
+              </button>
+            </Link>
           </div>
         </div>
       ))}

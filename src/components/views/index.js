@@ -8,3 +8,4 @@ export { default as AddCampusFormView } from "./AddCampusFormView";
 export { default as AddStudentFormView} from "./AddStudentFormView";
 export { default as EditCampus} from "./EditCampus";
 export { default as EditStudent} from "./EditStudent";
+export { default as OofsView} from "./UnderConstruction";

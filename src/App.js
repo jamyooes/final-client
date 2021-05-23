@@ -11,6 +11,7 @@ import {
   AllStudentsContainer,
   AddCampusFormContainer,
   AddStudentFormContainer,
+  UnderConstructionContainer,
 } from "./components/containers";
 
 import AppBar from "@material-ui/core/AppBar";
@@ -104,6 +105,7 @@ const App = () => {
         /*********************************************************/}
         <Route exact path="/campuses/create" component={AddCampusFormContainer} />
         <Route exact path="/students/create" component={AddStudentFormContainer} />
+        <Route exact path="/ooofs" component={UnderConstructionContainer} />
         {/*********************************************************** */}
       </Switch>
     </div>
