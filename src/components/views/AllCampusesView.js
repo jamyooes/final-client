@@ -1,7 +1,5 @@
-import { Button } from "@material-ui/core";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import AppBar from "@material-ui/core/AppBar";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -20,10 +18,9 @@ const AllCampusesView = (props) => {
 
   return (
     <div>
-
       {props.allCampuses.map((campus) => (
         <div key={campus.id}>
-          <Link to={`/campus/${campus.id}`}>
+          <Link to={`/campuses/${campus.id}`}>
             <h1>{campus.name}</h1>
           </Link>
           <p>{numStudents(campus)} students</p>

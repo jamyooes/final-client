@@ -16,7 +16,7 @@ const campus = (state = initialState, action) => {
     case ADD_CAMPUS:
       return [...state, action.payload];
     case DELETE_CAMPUS:
-      return state.filet((campus) => campus.id !== action.payload);
+      return state.students.filter((campus) => campus.id !== action.payload);
     case EDIT_CAMPUS:
       return state.map((campus) => {
         return campus.id === action.payload.id ? action.payload : campus;
