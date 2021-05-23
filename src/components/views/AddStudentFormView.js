@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const AddStudentFormView = (props) => {
     console.log(props.allCampuses);
@@ -70,7 +71,10 @@ const AddStudentFormView = (props) => {
                         placeholder="Image"
                     />
                 </div>
-                <button>Add Student</button>
+                
+            <Link  to={"/"}>
+            <button>Add Student</button>
+            </Link>
             </form>
         </div>
     );
