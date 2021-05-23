@@ -19,7 +19,7 @@ class StudentContainer extends Component {
     };
   }
 
-  EditStudent = (student) => {
+  OnClickEditStudent = (student) => {
     console.log("Student: ", student);
     this.setState(
       {
@@ -66,7 +66,7 @@ class StudentContainer extends Component {
       imageUrl: null,
       gpa: null,
     });
-    this.props.EditStudent(student);
+    this.props.editStudent(student);
   };
 
 
@@ -75,7 +75,7 @@ class StudentContainer extends Component {
     this.props.fetchAllCampuses();
   }
 
-  deleteStudent = (id) =>{
+  delete_Student = (id) =>{
     this.props.deleteStudent(id);
     window.location = '/students'; 
   }
@@ -94,9 +94,9 @@ class StudentContainer extends Component {
         gpa={this.state.gpa}
         student={this.props.student}
         allCampuses={campuses}
-        EditStudent={this.EditStudent}
+        OnClickEditStudent={this.OnClickEditStudent}
         StudentCancel={this.StudentCancel}
-        deleteStudent={this.props.deleteStudent}
+        delete_Student={this.props.delete_Student}
         handleEditStudentEvent={this.handleEditStudentEvent}
         handleChangeEvent={this.handleChangeEvent}
       />

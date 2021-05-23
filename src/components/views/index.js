@@ -6,4 +6,5 @@ export { default as AllStudentsView} from "./AllStudentsView";
 export { default as StudentsView} from "./StudentsView";
 export { default as AddCampusFormView } from "./AddCampusFormView";
 export { default as AddStudentFormView} from "./AddStudentFormView";
-
+export { default as EditCampus} from "./EditCampus";
+export { default as EditStudent} from "./EditStudent";

@@ -15,11 +15,11 @@ const AllStudentsView = (props) => {
           <p>GPA: {student.gpa}</p>
 
           <button onClick={() => props.deleteStudent(student.id)}>
-            Delete{" "}
+            Delete
           </button>
 
           <button onClick={() => props.editStudent(student)}>
-            Edit{" "}
+            Edit
           </button>
         </div>
       ))}
