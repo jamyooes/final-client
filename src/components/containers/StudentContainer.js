@@ -29,7 +29,6 @@ class StudentContainer extends Component {
         imageUrl: student.imageUrl,
         gpa: student.gpa,
       },
-      () => console.log("Student has been updated: ", this.state)
     );
   };
 
@@ -70,16 +69,16 @@ class StudentContainer extends Component {
     this.props.EditStudent(student);
   };
 
-  /*
+
   componentDidMount() {
     this.props.fetchStudent(this.props.match.params.id);
     this.props.fetchAllCampuses();
   }
 
-  deleteAStudent = (id) =>{
+  deleteStudent = (id) =>{
     this.props.deleteStudent(id);
     window.location = '/students'; 
-  */
+  }
 
   render() {
     const campuses = {};
@@ -97,7 +96,7 @@ class StudentContainer extends Component {
         allCampuses={campuses}
         EditStudent={this.EditStudent}
         StudentCancel={this.StudentCancel}
-        deleteAStudent={this.props.deleteAStudent}
+        deleteStudent={this.props.deleteStudent}
         handleEditStudentEvent={this.handleEditStudentEvent}
         handleChangeEvent={this.handleChangeEvent}
       />
@@ -106,19 +105,19 @@ class StudentContainer extends Component {
 }
 
 // map state to props
-const mapStatus = (status) => {
+const mapState = (state) => {
   return {
-    student: status.student,
-    allCampuses: status.allCampuses,
+    student: state.student,
+    allCampuses: state.allCampuses,
   };
 };
 
-const mapDisplay = (display) => {
+const mapDispatch = (dispatch) => {
   return {
-    fetchStudent: (id) => display(fetchStudentThunk(id)),
-    deleteAStudent: (id) => display(deleteStudentThunk(id)),
-    editStudent: (student) => display(editStudentThunk(student)),
+    fetchStudent: (id) => dispatch(fetchStudentThunk(id)),
+    deleteStudent: (id) => dispatch(deleteStudentThunk(id)),
+    editStudent: (student) => dispatch(editStudentThunk(student)),
   };
 };
 
-export default connect(mapStatus, mapDisplay)(StudentContainer);
+export default connect(mapState, mapDispatch)(StudentContainer);

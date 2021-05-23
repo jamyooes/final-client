@@ -12,7 +12,10 @@ const AllCampusesView = (props) => {
           <p>{numStudents(campus)} students</p>
           <div>
             <button onClick={() => props.deleteCampus(campus.id)}>
-              Delete
+              Delete {" "}
+            </button>
+            <button onClick={() => props.editCampus(campus)}>
+              Edit
             </button>
           </div>
         </div>

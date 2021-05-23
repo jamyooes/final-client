@@ -17,6 +17,10 @@ const AllStudentsView = (props) => {
           <button onClick={() => props.deleteStudent(student.id)}>
             Delete{" "}
           </button>
+
+          <button onClick={() => props.editStudent(student)}>
+            Edit{" "}
+          </button>
         </div>
       ))}
     </div>
