@@ -19,6 +19,7 @@ class AddCampusFormContainer extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.addCampus(this.state);
+    window.location = "/campuses";
   };
   render() {
     return (
