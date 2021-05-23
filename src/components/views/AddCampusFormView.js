@@ -46,8 +46,7 @@ const AddCampusFormView = (props) => {
                         onChange={props.handleChange}
                         />
                 </div>
-
-                <button>Create Campus</button>
+                <button>Add campus</button>
             </form>
         </div>
     );

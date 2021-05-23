@@ -70,7 +70,8 @@ const AddStudentFormView = (props) => {
                         placeholder="Image"
                     />
                 </div>
-                <button>Add Student</button>
+                
+            <button>Add Student</button>
             </form>
         </div>
     );
