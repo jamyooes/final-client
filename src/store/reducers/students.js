@@ -12,7 +12,7 @@ const allStudents = (state=[], action) => {
     case at.EDIT_STUDENT:
       return state.map(student => { 
         return (
-          student.id===action.payload.id ? action.payload : student
+          student.id === action.payload.id ? action.payload : student
         );
       });
     default:
