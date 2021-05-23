@@ -17,49 +17,10 @@ const useStyles = makeStyles((theme) => ({
 
 const AllStudentsView = (props) => {
   const classes = useStyles();
-  if (!props.allStudents.length) {
-    return (
-      <div>
-        <AppBar position="static" elevation={0} className={classes.appBar}>
-          <Link to={"/"}>
-            <Button
-              variant="contained"
-              color="primary"
-              style={{ marginLeft: "10px", marginTop: "10px" }}
-            >
-              Home
-            </Button>
-          </Link>
-        </AppBar>
-        <h1
-          style={{
-            textAlign: "center",
-            fontSize: "60px",
-            fontFamily: "Georgia",
-            color: "#4CC9F0",
-          }}
-        >
-          There are no students.
-        </h1>
-      </div>
-    );
-  }
 
   return (
     <div>
-      <div>
-        <AppBar position="static" elevation={0} className={classes.appBar}>
-          <Link to={"/"}>
-            <Button
-              variant="contained"
-              color="primary"
-              style={{ marginLeft: "10px", marginTop: "10px" }}
-            >
-              Home
-            </Button>
-          </Link>
-        </AppBar>
-      </div>
+      
 
       {props.allStudents.map((student) => (
         <div key={student.id}>

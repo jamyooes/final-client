@@ -63,7 +63,7 @@ class AddStudentFormContainer extends Component {
   
   const mapState = (state) => {
     return {
-      hello: "hello world!!!",
+      hello: "testing!",
       allCampuses: state.allCampuses,
     };
   };

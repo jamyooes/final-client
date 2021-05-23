@@ -38,46 +38,7 @@ const HomePageView = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <AppBar position="static" elevation={0} className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="h6" className={classes.title} color="inherit">
-            CRUD App
-          </Typography>
-
-          <Link className={classes.links} to={"/campuses"}>
-            <Button
-              variant="contained"
-              color="primary"
-              style={{ marginRight: "10px" }}
-            >
-              All Campuses
-            </Button>
-          </Link>
-
-          <Link className = {classes.links} to={"/campuses/create"}>
-            <Button variant="contained" color="primary" style={{ marginRight: "10px" }}>
-              Add Campus
-            </Button>
-          </Link>
-
-
-          <Link className={classes.links} to={"/students"}>
-            <Button variant="contained" color="primary" style={{ marginRight: "10px" }}>
-              All Students
-            </Button>
-          </Link>
-
-
-          <Link className = {classes.links} to={"/students/create"}>
-            <Button variant="contained" color="primary" style={{ marginRight: "10px" }}>
-              Add Students
-            </Button>
-          </Link>
-
-
-        </Toolbar>
-      </AppBar>
-
+  
       <div className={classes.greeting}>
         <h1>Home Page</h1>
       </div>
