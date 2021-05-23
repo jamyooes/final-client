@@ -7,22 +7,17 @@ import { addCampusThunk } from "../../store/thunks";
 class AddCampusFormContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: "",
-      address: "",
-      description: "",
-      imageUrl: "",
-    };
+    this.state = {name: "",address: "",description: "",imageUrl: "",};
   }
 
-  handleChange = (e) => {
+  handleChange = (event) => {
     this.setState({
-      [e.target.name]: e.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
+  handleSubmit = (event) => {
+    event.preventDefault();
     this.props.addCampus(this.state);
   };
   render() {

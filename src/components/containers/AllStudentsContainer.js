@@ -21,7 +21,7 @@ class AllStudentsContainer extends Component {
   };
 
   render() {
-    // pass all the info back to AllStudentsView to handle the displaying
+  
     return (
       <AllStudentsView
         allStudents={this.props.allStudents}
@@ -32,7 +32,6 @@ class AllStudentsContainer extends Component {
   }
 }
 
-// Map state to to the props
 const mapState = (state) => {
   return {
     title: "list of all students",
@@ -41,7 +40,7 @@ const mapState = (state) => {
   };
 };
 
-// Map dispatch to  the props
+
 const mapDispatch = (dispatch) => {
   return {
     fetchAllStudents: () => dispatch(fetchAllStudentsThunk()),
@@ -50,12 +49,12 @@ const mapDispatch = (dispatch) => {
   };
 };
 
-// prop tpyes
+
 AllStudentsContainer.propTypes = {
   allStudents: PropTypes.array.isRequired,
   fetchAllStudents: PropTypes.func.isRequired,
   fetchAllCampuses: PropTypes.func.isRequired,
 };
 
-// export container
+
 export default connect(mapState, mapDispatch)(AllStudentsContainer);

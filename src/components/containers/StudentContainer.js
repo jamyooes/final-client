@@ -1,10 +1,6 @@
 import { Component } from "react";
 import { connect } from "react-redux";
-import {
-  deleteStudentThunk,
-  editStudentThunk,
-  fetchStudentThunk,
-} from "../../store/thunks";
+import {deleteStudentThunk, editStudentThunk, fetchStudentThunk} from "../../store/thunks";
 import StudentsView from "../views/StudentsView";
 
 class StudentContainer extends Component {
@@ -21,50 +17,28 @@ class StudentContainer extends Component {
 
   OnClickEditStudent = (student) => {
     console.log("Student: ", student);
-    this.setState(
-      {
-        firstName: student.firstName,
-        lastName: student.lastName,
-        email: student.email,
-        imageUrl: student.imageUrl,
-        gpa: student.gpa,
-      },
+    this.setState({ firstName: student.firstName, lastName: student.lastName, email: student.email,imageUrl: student.imageUrl, 
+      gpa: student.gpa,},
     );
   };
 
   StudentCancel = () => {
-    this.setState({
-      firstName: null,
-      lastName: null,
-      email: null,
-      imageUrl: null,
-      gpa: null,
+    this.setState({firstName: null, lastName: null, email: null, imageUrl: null, gpa: null,
     });
   };
 
   handleChangeEvent = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
+    this.setState({ [event.target.name]: event.target.value,});
   };
 
   handleEditStudentEvent = (event) => {
     event.preventDefault();
-    let student = {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      email: this.state.email,
+    let student = {firstName: this.state.firstName, lastName: this.state.lastName,email: this.state.email,
       imageUrl: this.state.imageUrl,
       gpa: this.state.gpa,
     };
 
-    console.log(student);
-    this.setState({
-      firstName: null,
-      lastName: null,
-      email: null,
-      imageUrl: null,
-      gpa: null,
+    this.setState({firstName: null, lastName: null, email: null, imageUrl: null, gpa: null,
     });
     this.props.editStudent(student);
   };

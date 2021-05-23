@@ -7,41 +7,33 @@ import { AddStudentFormView } from "../views";
 class AddStudentFormContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      firstname: "",
-      lastname: "",
-      email: "",
-      gpa: 0,
-      imageUrl: "",
-      campusId: "",
-    };
+    this.state = {firstname: "", lastname: "", email: "",gpa: 0, imageUrl: "", campusId: "",};
   }
 
   componentDidMount() {
     this.props.fetchAllCampuses();
   }
 
-  handleChange = (e) => {
+  handleChange = (event) => {
     this.setState({
-      [e.target.name]: e.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
+  handleSubmit = (event) => {
+    event.preventDefault();
     if (this.state.firstname === "" || !this.state.firstname) {
-      return alert("please enter student first name");
+      return alert("Enter first name");
     }
     if (this.state.lastname === "" || !this.state.lastname) {
-      return alert("please make sure you enter your last name");
+      return alert("Enter last name");
     }
     if (this.state.email === "" || !this.state.email) {
-      return alert("please make sure you entered the students email");
+      return alert("Enter email");
     }
     if (this.state.gpa < 0 || this.state.gpa > 4.0) {
-      return alert("enter a valid gpa value");
+      return alert("Enter gpa");
     }
-    console.log(this.state);
     this.props.addStudent(this.state);
     window.location = "/students";
   };

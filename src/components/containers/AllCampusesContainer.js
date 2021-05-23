@@ -55,14 +55,14 @@ class AllCampusesContainer extends Component {
   }
 }
 
-// map to the props
+
 const mapState = (state) => {
   return {
     allCampuses: state.allCampuses,
   };
 };
 
-// dispatch to props
+
 const mapDispatch = (dispatch) => {
   return {
     fetchAllCampuses: () => dispatch(fetchAllCampusesThunk()),
@@ -71,11 +71,11 @@ const mapDispatch = (dispatch) => {
   };
 };
 
-// prop type
+
 AllCampusesContainer.propTypes = {
   allCampuses: PropTypes.array.isRequired,
   fetchAllCampuses: PropTypes.func.isRequired,
 };
 
-// export container
+
 export default connect(mapState, mapDispatch)(AllCampusesContainer);

@@ -19,12 +19,18 @@ const useStyles = makeStyles((theme) => ({
   greeting: {
     display: "flex",
     justifyContent: "center",
-    backgroundColor: "white",
+    //backgroundColor: "white",
     width: "50%",
     margin: "auto",
   },
   links: {
     textDecoration: "none",
+  },
+  images: {
+    display: "flex",
+    margin: "auto",
+    justifyContent: "center",
+    width: "5%",
   },
 }));
 
@@ -33,7 +39,10 @@ const OofsView = () => {
   return (
     <div className={classes.root}>
       <div className={classes.greeting}>
-        <img src="https://images.unsplash.com/photo-1590479773265-7464e5d48118?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"></img>
+      <h1>RIP</h1>
+      </div>
+      <div>
+        <p className = {classes.images}><img src="https://images.unsplash.com/photo-1590479773265-7464e5d48118?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"></img></p>
       </div>
     </div>
   );
